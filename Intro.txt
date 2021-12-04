@@ -1,0 +1,31 @@
+
+*****Documentation*****
+
+1) Array 
+
+-> Array is the abstract data type (ADT which hide the internal work only show outer work)
+-> Array is Primitive  data type
+-> Array store continues memory location and take only one data types at a time
+-> Array is the initialise that square brackets and give the argument to size 
+-> Array store in stack when it declare in main function
+-> if you use Array with doesn't give any argument that return grabage value
+
+
+2) Structure
+
+-> structure is the user defined data types where we will group together 
+-> related data member  named as one name which is similar or disimilar type
+-> which ever element is inilialized that sum is required for taken memory of structure
+-> There are many ways to inilialized the value it's like a class create a obj like that
+
+
+3) Pointer 
+
+-> Pointer is use to access memory indirectly
+-> One of the point is to access the heap memory which is outside the program
+-> Pointer is use various places like in internal structure of OS to access the files to access hardware 
+   components
+-> Pointer use for accessing heap , accessing resources ,parameter passing
+-> Pointer takes 8 byte memory for every data member for 64bit computer
+-> so it's independent with data member variable
+-> compiler can decide the value of taking the pointer
