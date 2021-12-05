@@ -29,3 +29,36 @@
 -> Pointer takes 8 byte memory for every data member for 64bit computer
 -> so it's independent with data member variable
 -> compiler can decide the value of taking the pointer
+
+
+4) Reference 
+
+-> For the small purpose use we will use reference instead of pointer
+-> reference is just like pointer both are for change the values
+
+
+5) Pointer in Structure
+
+-> If there is Structure and how to point the pointer on it
+-> Doing pointer we will modify the value of Structure 
+-> use (->) symbol to access the pointer with respect of structure
+-> the Structure obj created in heap so use malloc function and cast it after use using pointer
+
+
+6) Functions
+
+-> Function is like structure but in structure it is grouping the data element and in function 
+   there is grouping instructions
+-> function is procedures or modules.
+-> all line code write in main (monolithic programming) which is bad practice use functions 
+-> using function it called procedural programming or modular programming 
+-> put the function think in the library and reuse this thinks
+-> you can not access the variable of functions in main or vice-versa
+-> function contain three method for parameter passing which is pass by value, pass by reference, 
+   pass by address 
+-> big function which performloop and some computaional task then not use call by reference
+-> one change is like we can not change the value directly using functions but here that swap 
+   function is part of main method so value will change directly
+-> in parameter we will only use address in array so we will pass pointer and in function it is 
+   pointer to an array. in function , Array should declare as pointer and nominal way 
+-> if you initialise the array dynamically then you will be create a pointer and return it in main

@@ -11,7 +11,7 @@ using namespace std;
     {
         int len;//int take two or four bytes
         int bre;//int take two or four bytes
-    };//so structure occupied 4 or 8 byte memory
+    };//so structure occupied 4 or 8 byte memory becuase of int data type
 
     struct Stu
     {
@@ -56,9 +56,5 @@ int main(void)
     // to initialize all the student
     struct Stu s1[4]={{1,2},{3,4},{6,5},{7,8}};
     cout<<s1[3].roll_no<<endl;
-
-
-    
-
     return 0;
 }
