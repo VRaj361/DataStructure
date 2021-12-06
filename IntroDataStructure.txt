@@ -1,0 +1,28 @@
+There are some more terms.
+1) Data Structure 
+
+-> Data Structure is collection of the data which is stored systomatically
+-> in main memory of CPU perform task are example of data structure
+
+2) Data Base 
+
+-> Data Base is the Collection of huge amount of data in disc which store on one data base using hdd,ssd 
+
+3) Data Warehouse 
+-> Data Warehouse means a very large amount of Array disc are store at one place which contain commercial,
+    historical date and etc.
+-> when we use that data simply we can fetch the data and analysis it 
+-> It is not use day by day
+
+4) Big data
+
+-> Some operations, task , analysis perform on very huge amount of data in terms of internet called big data
+
+*** Data Structure types
+1)Primitive- int,float,char,boolean etc
+2)nonPrimitive- Two types
+                -> linear - stack,linklist,queue,array
+                -> non-linear - tree graph
+                -> tabular - hashmap
+
+-> ADT - abstract data types is have set of data and operations which doesn't show internal details ex class

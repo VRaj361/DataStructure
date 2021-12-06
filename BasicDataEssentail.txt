@@ -62,3 +62,20 @@
 -> in parameter we will only use address in array so we will pass pointer and in function it is 
    pointer to an array. in function , Array should declare as pointer and nominal way 
 -> if you initialise the array dynamically then you will be create a pointer and return it in main
+-> We use structure as parameter passing 
+-> In arrays we only use pass by address
+-> We can change the value in structure using pointer
+
+5) Class
+
+-> Class is similar think like structure
+-> the only difference is class contain access specifiers 
+-> We use class so we will provided some nice features by class and OOPS 
+-> Constructor,accessor,mutetor,feasilitator,destructor etc.
+
+
+6) Template
+
+-> Template  is Generics when class should not know about what can data can pass by main
+   then use Template class to decide the data types 
+-> at simply that only replace the data type with template class 
