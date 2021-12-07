@@ -1,0 +1,15 @@
+**** Recursion
+-> If we talked about recursion and function then the function is group of instructions
+-> in Recurstion we use the function but function call it self it called Recurstion
+-> Recursion must need base condition then the program will terminated
+-> If we don't give condition then the program will runs until and unless the memory is not been 
+   filled completely this condition is called Stack-overflow condition 
+-> there are traising tree to understand recursion
+-> recursion is work as ascending and descending order first call and after return or first go base condition after return the
+   values or operations
+
+-> Basic Difference between loop and recursion is Loop is going in ascending phase and recursion is going in descending phase
+-> time taken by execution is O(n) because of all the calls 1 so n steps takes n time complexity in order to understand tree of calls in
+   recurstion
+-> use Static variable for one time memory allocation in recursion
+   
