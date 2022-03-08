@@ -11,5 +11,18 @@
 -> Basic Difference between loop and recursion is Loop is going in ascending phase and recursion is going in descending phase
 -> time taken by execution is O(n) because of all the calls 1 so n steps takes n time complexity in order to understand tree of calls in
    recurstion
--> use Static variable for one time memory allocation in recursion
+-> use Static variable for one time memory allocation in recursion and daily time also
+
+-> type of recursion
+1) tail recursion->print first and function at last 
+   -> if you write the tail recursion if possible that convert the recursion into loop because of space complexity of recursion is O(n) and loop has O(1)
+   -> in some cases compiler can convert the code of tail recursion into object code of loop  
+
+2) head recursion->print last and function at first 
+   -> if you write the head recursion it is hard to implement in loop 
+
+3) tree recursion-> at least two time function call at one time
+
+4) indirect recursion -> Different function can use his functionallity at turn by turn like circular fashion
+
    
