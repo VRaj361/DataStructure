@@ -12,7 +12,7 @@ int main(void)
 
     //pointer basic
     short *p=&n;
-    cout<<"Pointer of p is(Address) -> "<<p<<endl;//value of in p
+    cout<<"Pointer of p is(Address) -> "<<p<<endl;//Address of in p
     cout<<"Pointer of p is(Value) -> "<<*p<<endl;//value of p
     cout<<"Number of n is (Address) -> "<<&n<<endl;//address of n 
     cout<<"Number of n is (Value) -> "<<n<<endl;//value of n
@@ -46,8 +46,8 @@ int main(void)
 
     //copying the pointer
     short *q=p;
-    cout<<endl<<"values "<<p<<" "<<q<<endl;
-    cout<<"Pointer"<<*p<<" "<<*q<<endl;
+    cout<<endl<<"values :"<<p<<" "<<q<<endl;
+    cout<<"Pointer :"<<*p<<" "<<*q<<endl;
 
     //concept
     int i=3;
@@ -59,6 +59,29 @@ int main(void)
     t=t+1;
     cout<<"Value After "<<t<<endl;
     //4 bytes pointer can move further c,d,e,f,0
+
+    //array value
+    int arr[10]={4,2};
+    cout<<"Value of pointer "<<*arr<<endl;
+    cout<<"Size of pointer "<<sizeof(*arr)<<endl;
+    cout<<"Address of pointer "<<&arr<<endl;
+
+    cout << "Pointer + 1 " << *arr + 1 << endl;
+    cout << "array+1 whole pointer " << *(arr + 1) << endl;
+    cout << "pointer+1 " << *(arr) + 1 << endl;
+    
+
+    //all the address is same
+    int a[20] = {1,2,3,5};
+    cout << " ->" << &a[0] << endl;
+    cout << &a << endl;
+    cout << a << endl;
+
+    int *p1 = &a[0];
+    cout << p1 << endl;
+    cout << *p1 << endl;
+    cout << "-> " << &p1 << endl;
+
 
 
     return 0;
