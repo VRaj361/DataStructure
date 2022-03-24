@@ -82,7 +82,11 @@ int main(void)
     cout << *p1 << endl;
     cout << "-> " << &p1 << endl;
 
-
+    //index[arr] can show the value
+    //which is equal to *(i+arr)
+    //*(i+arr)==*(arr+i) which can arr[i]
+    int ai=2;
+    cout<<ai[a]<<endl;
 
     return 0;
 }
