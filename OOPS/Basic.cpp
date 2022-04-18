@@ -1,5 +1,6 @@
 #include<iostream>
 #include "Basic1.cpp"
+#include<string.h>
 using namespace std;
 class Hello{//class
     //properties
@@ -9,9 +10,25 @@ class Hello{//class
 
     public:
     int a1=10;
-    
+    int b1;
+    char *name;
+
     Hello(){
         cout<<"Constuctor is called "<<endl;//first constructor is called because first object can load 
+    }
+    Hello(int b1){
+        this->b1=b1;
+    }
+    //copy constructor
+    Hello(Hello& temp){//automatically override the implementation
+        cout<<"Copy constructor called "<<endl;
+        this->b1=temp.b1;
+        // this->name=temp.name;
+        char *temp1=new char[strlen(temp.name)+1];//for null character
+        strcpy(temp1,temp.name);
+        this->name=temp1;
+
+
     }
     //getter and setter
     void setValue(int a){
@@ -22,9 +39,14 @@ class Hello{//class
     int getValue(){
         return a;
     }
+
+    void setName(char name[]){
+        strcpy(this->name,name);
+    }
+
 };
 int main(){
-    Hello h1;//this will create a instance of the class
+    Hello h1,h2(111);//this will create a instance of the class
     cout<<h1.a1<<endl;//access properties using dot operator
 
     h1.setValue(12);
@@ -47,8 +69,21 @@ int main(){
     cout<<"Get value of a is "<<h->getValue()<<endl;
 
     
+    //copy consturctor
 
-
+    cout<<"Value of b1 using h2 object is "<<h2.b1<<endl;
+    char name[5]="Vraj";
+    h2.setName(name);
+    cout<<"Value of name is using h2 object is "<<h2.name<<endl;
+    Hello h3(h2);//calling copy constructor
+    cout<<"Value of b1 using h3 object is "<<h3.b1<<endl;
+    cout<<"Value of name is using h3 object is "<<h3.name<<endl;
+    //shallow copy
+    h2.name[0]='R';
+    cout<<"Value of name is using h2 object is "<<h2.name<<endl;
+    cout<<"Value of name is using h3 object is "<<h3.name<<endl;
+    
+    //deep copy
 
 
     Hello1 h11;
