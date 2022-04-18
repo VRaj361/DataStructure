@@ -12,6 +12,7 @@ class Hello{//class
     int a1=10;
     int b1;
     char *name;
+    static int run;
 
     Hello(){
         cout<<"Constuctor is called "<<endl;//first constructor is called because first object can load 
@@ -43,8 +44,18 @@ class Hello{//class
     void setName(char name[]){
         strcpy(this->name,name);
     }
+    static int print(){
+        cout<<run<<endl;
+    }
+    ~Hello(){
+        //destructor
+        cout<<"Destructor called for dynamic memory "<<endl;
+    }
+
+   
 
 };
+int Hello::run=5;
 int main(){
     Hello h1,h2(111);//this will create a instance of the class
     cout<<h1.a1<<endl;//access properties using dot operator
@@ -83,9 +94,23 @@ int main(){
     cout<<"Value of name is using h2 object is "<<h2.name<<endl;
     cout<<"Value of name is using h3 object is "<<h3.name<<endl;
     
-    //deep copy
+    //deep copy changes in copy constructor file
 
+    //assignment operator menas you can store one object to another object like h1=h2;
 
+    //Destructor
+    Hello s;//static
+    //automatically call
+    Hello *d=new Hello();//dynamic
+    delete d;
+
+    //static keyword
+    cout<<Hello::run<<endl;
+    h1.run=10;
+    cout<<h1.run<<endl;//initialization in memory one time Compile onces so no extra memory can take
+
+    //static function can only runs static variables
+    Hello::print();
     Hello1 h11;
     // use all the properties directly 
     return 0;
