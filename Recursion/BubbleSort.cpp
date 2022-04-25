@@ -24,3 +24,5 @@ int main(){
         cout<<arr[i]<<" ";
     }
 }
+//reverse number
+//count of steps
