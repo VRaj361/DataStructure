@@ -1,1 +1,4 @@
-cout<<remain<<endl;
+f(n==i){
+        return -1;
+    }
+    i

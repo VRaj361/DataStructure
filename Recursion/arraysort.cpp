@@ -11,7 +11,7 @@ void sortarr(int arr[],int s){
         return;
     } 
     
-    sortarr(arr+1,s-1);
+    sortarr(arr+1,s-1); 
 
 
 }
@@ -23,3 +23,4 @@ int main(void)
     sortarr(arr,4);
     return 0;
 }
+    
