@@ -25,6 +25,6 @@ int lastFirstOccurance(int arr[],int n,int i,int key){
 }
 int main(){
     int arr[]={1,2,3,4,2};
-    cout<<firstLastOccurance(arr,5,0,8)<<endl;
-    cout<<lastFirstOccurance(arr,5,0,7);
+    cout<<firstLastOccurance(arr,5,0,2)<<endl;
+    cout<<lastFirstOccurance(arr,5,0,2);
 }

@@ -8,7 +8,7 @@ int power(int b,int p){
     if(p==0){
         return 1;
     }
-    return power(b,p-1)*b;
+    return power(b,p-1)*b;//stack size n
 }
 
 int powerB(int b,int p){
@@ -35,7 +35,7 @@ int powerC(int n,int p){
     if(p%2==0){
         return powerC(n,p/2)*powerC(n,p/2);
     }else{
-        return n*powerC(n,p/2)*powerC(n,p/2);
+        return n*powerC(n,p/2)*powerC(n,p/2);//stack size logn
     }
 }
 
