@@ -9,6 +9,19 @@ int climbStair(int n){
     }
     return climbStair(n-1)+climbStair(n-2);//two choice climb one stair or two stair
 }
+
+int ClimbStair1(int n){
+    //the user have to three option either it can go for 1 stair,2 stair,3 stair
+    if(n<0){
+        return 0;
+    }
+    if(n==0){
+        return 1;
+    }
+    return ClimbStair1(n-1)+ClimbStair1(n-2)+ClimbStair1(n-3);
+}
+
 int main(){
-    cout<<climbStair(5);
+    cout<<climbStair(5)<<endl;
+    cout<<ClimbStair1(5);
 }
