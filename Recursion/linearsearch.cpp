@@ -30,6 +30,7 @@ void linearsearchall(int *arr,int n,int k,int s){
     }
     linearsearchall(arr,n,k,s+1);
 }
+
 int main(void)
 {
     int arr[]={2,5,1,6,55,6};
@@ -39,6 +40,5 @@ int main(void)
     for(int i=0;i<v.size();i++){
         cout<<v[i]<<",";
     }
-    cout<<"]";
-    return 0;
+    cout<<"]"<<endl;
 }
