@@ -8,16 +8,12 @@ int reverse(int n,int ne){
     int num=n%10;
     ne=ne*10+num;
     return reverse(n/10,ne);
-
 }
 int helper(int n){//you can derived digits using log method 
     int d=(int)log10(n)+1;
     if(n==0){
         return 0;
     }
-    
-  
-    
     return ((n%10*pow(10,d-1))+helper(n/10));
 }
 

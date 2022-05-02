@@ -12,7 +12,7 @@ bool isSafe(vector<vector<int>>& arr,int n,int x,int y,vector<vector<int>> visit
 }
 
 
-void solve(vector<vector<int>>& arr,int n,vector<string>& ans,vector<vector<int>> visited,int x,int y,string path){
+void solve(vector<vector<int>> arr,int n,vector<string>& ans,vector<vector<int>>& visited,int x,int y,string path){
     if(x==n-1&&y==n-1){
         ans.push_back(path);
         return;

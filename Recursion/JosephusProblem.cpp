@@ -24,6 +24,6 @@ int jos(int n,int k){
 //2 is deleted
 
 int main(){
-    cout<<jos(5,3);
+    cout<<jos(3,3);
     //position starts with 1 then only can change is +1 in answer
 }

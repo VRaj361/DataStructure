@@ -3,7 +3,7 @@ using namespace std;
 
 int search(int *arr,int tar,int s,int e){
     if(s>e){
-        return 01;
+        return 0;
     }
     int mid=s+(e-s)/2;
     if(arr[mid]==tar){

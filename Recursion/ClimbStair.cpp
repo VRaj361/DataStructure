@@ -22,6 +22,6 @@ int ClimbStair1(int n){
 }
 
 int main(){
-    cout<<climbStair(5)<<endl;
+    cout<<climbStair(4)<<endl;
     cout<<ClimbStair1(5);
 }

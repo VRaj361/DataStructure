@@ -8,14 +8,18 @@ bool checkAB(string str){
         return true;
     }
     if(str.at(0)=='a'){
-        if(str.length()>2||str.substr(1,3)=="bb"){
+        
+        if(str.length()>2&&str.substr(1,2)=="bb"){
+            // cout<<"i "<<str.at(0)<<str.at(1);
             return checkAB(str.substr(3));
         }else{
+            
+            
             return checkAB(str.substr(1));
         }
     }//a it self return or bb return
     return false;
 }
 int main(){
-    cout<<checkAB("abba");
+    cout<<checkAB("abb");
 }
