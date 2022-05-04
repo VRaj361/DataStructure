@@ -8,6 +8,14 @@ class Node{
         this->data=data;
         this->next=NULL;
     }
+    ~Node(){
+        int val=this->data;
+        if(this->next!=NULL){
+            delete next;
+            this->next=NULL;
+        }
+        cout<<"Deleted Node value is "<<val<<endl;
+    }
 };
 
 void insertAtHead(Node* &head,int d){
@@ -34,12 +42,36 @@ void insertAtMiddle(Node *& head,int position,int d){
         t=t->next;
         count++;
     }
-    if(temp->next==NULL){
+    if(t->next==NULL){
         insertAtTail(head,d);
         return;
     }
     temp->next=t->next;
     t->next=temp;    
+}
+
+void deleteNode(Node *& head,int position){
+
+    if(position==1){
+        Node *temp=head;
+        head=head->next;
+        temp->next=NULL;
+        delete temp;
+    }//the case of position 1 means you are deleting first node
+    else{
+        Node *curr=head;
+        Node *prev=NULL;
+        int n=1;
+        while(n<position){
+            prev=curr;
+            curr=curr->next;
+            n++;
+        }
+        prev->next=curr->next;       
+        curr->next=NULL;
+        delete curr;
+    }
+
 }
 
 void print(Node *& head){
@@ -66,9 +98,11 @@ int main(){
     insertAtTail(tail,40);
     print(head);
     //insert at the middle position
-    insertAtMiddle(head,1,50);
+    insertAtMiddle(head,2,50);
     insertAtMiddle(head,2,60);
     print(head);
-
+    //delete the node
+    deleteNode(head,6);
+    print(head);
 
 }
