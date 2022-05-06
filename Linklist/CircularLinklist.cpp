@@ -103,7 +103,7 @@ bool isCircular(Node *tail){
     }
     
     //case 2 for >1 node 
-    temp=tail->next;
+    temp=tail->next;  
     while(temp!=tail&&temp!=NULL){
         temp=temp->next;
     }
@@ -129,6 +129,7 @@ bool detectCycle(Node *&tail){
         temp=temp->next;
     }
 }
+
 Node *floyedDetectCycle(Node *&tail){
     if(tail==NULL){
         return NULL;
