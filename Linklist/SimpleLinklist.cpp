@@ -82,6 +82,27 @@ void print(Node *& head){
     }
     cout<<endl;
 }
+bool isCircular(Node *head){
+    //case 1 for <=1 node
+    Node *temp=head;
+    if(head->next==NULL||head==NULL){
+        return false;
+    }
+    
+    //case 2 for >1 node 
+    temp=head->next;
+    while(temp!=head&&temp!=NULL){
+        temp=temp->next;
+    }
+    if(temp==head){
+        return true;
+    }
+    if(temp==NULL){
+        return false;
+    }
+    return false;
+
+}
 int main(){
     Node *n=new Node(10);
     // cout<<n->data<<endl;
@@ -104,5 +125,6 @@ int main(){
     //delete the node
     deleteNode(head,6);
     print(head);
+    cout<<isCircular(head);
 
 }
