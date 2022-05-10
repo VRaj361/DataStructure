@@ -64,6 +64,57 @@ Node<int>* sortTwoLists(Node<int>* first, Node<int>* second)
 	}
 	return first;
 }
+
+Node<int>* solve1(Node<int>* first, Node<int>* second){
+	if(first->next==NULL){
+		first->next=second;
+		return first;
+	}
+	Node<int>* curr1=first;
+	Node<int>* next1=curr1->next;
+	Node<int>* curr2=second;
+	Node<int>* next2=curr2->next;
+
+	//checking for the condition
+	while(next1!=NULL&&curr2!=NULL){
+		if(curr2->data>=curr1->data&&curr2->data<=next1->data){
+			//you need to write a logic 
+			next2=curr2->next;
+			curr1->next=curr2;
+			curr2->next=next1;
+
+			curr1=curr2;
+			curr2=next2;
+		}else{
+			curr1=next1;
+			next1=next1->next;
+			if(next1==NULL){
+				curr1->next=curr2;
+				return first;
+			}
+		}
+	}
+	return first;
+
+}
+
+
+Node<int>* sortTwoLists1(Node<int>* first, Node<int>* second){
+	if(first==NULL){
+		return second;
+	}
+	if(second==NULL){
+		return first;
+	}
+	if(first->data<=second->data){
+		return solve1(first,second);
+	}else{
+		return solve1(second,first);
+	}
+	return first;
+}
+
+
 void print(Node<int> *&head)
 {
     Node<int> *temp = head;
@@ -87,7 +138,7 @@ int main(){
     head4->next = head5;
     head5->next = head6;
 
-    head=sortTwoLists(head,head4);
+    head=sortTwoLists1(head,head4);
     print(head);
     
 }

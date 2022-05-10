@@ -100,6 +100,52 @@ Node* sortList1(Node *head)
 	
 	return head;
 }
+void insert(Node *&tail,Node *temp){
+    tail->next=temp;
+    tail=tail->next;
+}
+Node *sort012(Node *head){
+    //creating three linklist
+    Node *zh=new Node(-1);
+    Node *zt=zh;
+    
+    Node *oh=new Node(-1);
+    Node *ot=oh;
+
+    Node *th=new Node(-1);
+    Node *tt=th;
+
+    Node *temp=head;
+    while(temp!=NULL){
+        if(temp->data==0){
+            insert(zt,temp);
+        }else if (temp->data==1){
+            insert(ot,temp);
+        }else{
+            insert(tt,temp);
+        }
+        temp=temp->next;
+    }
+    //merging
+    //check for middle linklist
+    if(oh!=NULL){
+        zt->next=oh->next;
+    }else{
+        zt->next=th->next;
+    }
+    ot->next=th->next;
+    tt->next=NULL;
+
+    head=zh->next;//head initialization
+    delete zh;
+    delete oh;
+    delete th;
+    return head;
+
+}
+
+
+
 void print(Node *&head)
 {
     Node *temp = head;
@@ -117,13 +163,13 @@ int main()
     Node *head2 = new Node(2);
     Node *head3 = new Node(1);
     Node *head4 = new Node(2);
-    Node *head5 = new Node(1);
+    Node *head5 = new Node(0);
     head->next = head1;
     head1->next = head2;
     head2->next = head3;
     head3->next = head4;
     head4->next = head5;
     // head=sortList(head);
-    head=sortList1(head);
+    head=sort012(head);
     print(head);
 }

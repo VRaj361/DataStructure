@@ -71,7 +71,7 @@ int main()
     head3->next=head4;
     head4->next=head5;
     head5->next=head6;
-    head=kReverse(head,2);  
+    head=kReverse(head,3);  
     print(head);
 
 }
