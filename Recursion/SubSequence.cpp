@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+
 using namespace std;
 void solve(string str,string s,int index,vector<string>& ans){
 	if(index>=str.length()){
@@ -36,6 +37,27 @@ void substring(string str,string str1){
 	substring(str.substr(1),str1);
 }
 
+void printSubset(vector<int> l)
+{
+	for(int i=0;i<l.size();i++){
+		cout<<l.at(i)<<" ";
+
+	}
+	cout<<endl;
+}
+void subSet(int n,vector<int> l){
+	if(n==0){
+		printSubset(l);
+		return;
+	}
+	//add that element
+	l.push_back(n);
+	subSet(n-1,l);
+
+	//remove that element
+	l.pop_back();
+	subSet(n-1,l);
+}
 int main(){
     vector<string> ans;
     ans=subsequences("abc");
@@ -46,5 +68,8 @@ int main(){
 	//second method where we can print the string directly
 	substring("abc","");
 
+	//third method will be given int and find total subsequences
+	vector<int> l;
+	subSet(3,l);
 
 }
