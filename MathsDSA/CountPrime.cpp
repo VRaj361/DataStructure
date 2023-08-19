@@ -1,8 +1,9 @@
-// 204 count prime leetcode
 #include <iostream>
 #include <vector>
-
 using namespace std;
+
+//204 count prime leetcode
+//Sieve of Erathosthenes
 int countPrimes(int n)
 {
     int count = 0;
@@ -24,7 +25,5 @@ int countPrimes(int n)
 }
 int main()
 {
-    cout<<countPrimes(10)<<endl;
-
-
+    cout<<countPrimes(18)<<endl;
 }
